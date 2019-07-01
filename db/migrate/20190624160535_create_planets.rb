@@ -7,7 +7,7 @@ class CreatePlanets < ActiveRecord::Migration[5.2]
       t.float :mass
       t.string :orbital_period
       t.string :day_length
-      t.string :sun_distance
+      t.integer :sun_distance
       t.integer :temperature
       t.integer :moons
 

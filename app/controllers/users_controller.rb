@@ -53,14 +53,14 @@ class UsersController < ApplicationController
   #   end
   # end
 
-  def user_planets
-    user = current_user
-    if user
-      render json: user.user_planets
-    else
-      render  status: 400
-    end
-  end
+  # def user_planets
+  #   user = current_user
+  #   if user
+  #     render json: user.user_planets
+  #   else
+  #     render  status: 400
+  #   end
+  # end
 
   # json: { error: 'Invalid token.' },
 

@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_095210) do
     t.float "mass"
     t.string "orbital_period"
     t.string "day_length"
-    t.string "sun_distance"
+    t.integer "sun_distance"
     t.integer "temperature"
     t.integer "moons"
     t.datetime "created_at", null: false

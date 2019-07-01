@@ -5,6 +5,22 @@ class PlanetsController < ApplicationController
     render json: planets
   end
 
+  def show
+    planet = Planet.find_by(id: params[:id])
+    if planet
+    render json: planet
+    else
+      render json: { error: 'Planet not found from SHOW server.' }, status: 404
+    end
+  end
+
+  def update
+    # byebug
+    planet = Planet.find(params[:id])
+    planet.update(likes: params[:likes].to_i)
+      render json: planet
+  end
+
 end
 
 
