@@ -28,12 +28,13 @@ class UserPlanetsController < ApplicationController
 
   def create
     user = current_user
-    user_planet = UserPLanet.new(planet_id: params[:id], user_id: user.id)
+    # byebug
+    user_planet = UserPlanet.new( user_id: user.id, planet_id: params[:planetId] )
     if user_planet.save
-      user_planet.save
+        user_planet.save
       render json: user_planet
     else
-      render json: { error: 'User Planet not found from CREATE.' }, status: 404
+      render json: { error: 'User Planet not found from CREATE.' }, status: 400
     end
   end
 

@@ -2,7 +2,7 @@ class PlanetsController < ApplicationController
 
   def index
     planets = Planet.all
-    render json: planets
+    render json: planets.as_json(methods: :user_likes)
   end
 
   def show

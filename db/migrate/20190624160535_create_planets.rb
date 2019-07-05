@@ -10,7 +10,9 @@ class CreatePlanets < ActiveRecord::Migration[5.2]
       t.integer :sun_distance
       t.integer :temperature
       t.integer :moons
-
+      t.boolean :isAdopted
+      t.string :types
+      
       t.timestamps
     end
   end

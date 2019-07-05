@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_06_25_095210) do
     t.integer "sun_distance"
     t.integer "temperature"
     t.integer "moons"
+    t.boolean "isAdopted"
+    t.string "types"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

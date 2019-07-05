@@ -42,7 +42,7 @@ class UsersController < ApplicationController
         end
   end
 
-
+end
   # def validate
   #   id = request.headers['Authorization'].to_i
   #   user = User.find_by(id: id)
@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   # json: { error: 'Invalid token.' },
 
   
-end
+
 
 
 
