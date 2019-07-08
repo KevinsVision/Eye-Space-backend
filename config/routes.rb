@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :user_planets
   resources :planets
+  resources :rename_planets
 
   # get '/userplanets', to: 'user_planets#show'
 

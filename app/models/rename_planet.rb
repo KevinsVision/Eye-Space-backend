@@ -1,4 +1,4 @@
-class RenamingPlanet < ApplicationRecord
+class RenamePlanet < ApplicationRecord
   belongs_to :user
   belongs_to :planet
 end

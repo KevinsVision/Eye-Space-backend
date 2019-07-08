@@ -8,9 +8,24 @@ class PlanetsController < ApplicationController
   def show
     planet = Planet.find_by(id: params[:id])
     if planet
-    render json: planet
+    render json: planet, include: :rename_planets
+    # except: [:updated_at, :created_at]
     else
       render json: { error: 'Planet not found from SHOW server.' }, status: 404
+    end
+  end
+
+  def show
+    user = User.find_by(id: params[:id])
+    if user
+      render json: user, include: [:rename_planets, { 
+        :user_planets => { 
+          include: :planet, except: [:updated_at, :created_at]
+           }
+      }],
+      except: [:updated_at, :created_at]
+    else
+      render json: { error: 'User not found from SHOW server.' }, status: 404
     end
   end
 

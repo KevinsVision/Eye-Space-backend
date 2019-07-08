@@ -9,6 +9,7 @@
 User.destroy_all
 Planet.destroy_all
 UserPlanet.destroy_all
+RenamePlanet.destroy_all
 
 kevin = User.create(username: 'Kevin', password: 'lol')
 
@@ -42,6 +43,9 @@ UserPlanet.create([
   { user: kevin, planet: wolf_1061_c}
 ])
 
+
+london = RenamePlanet.create(user: kevin, planet: tRAPPIST_1_d, renamed: 'London')
+phoenix = RenamePlanet.create(user: kevin, planet: tau_Cet_e, renamed: 'Phoenix')
 
 
 # UserPlanet.create(user_id: kevin.id, planet_id: mercury.id, vote_count: 14, new_planet_name: 'hello')
