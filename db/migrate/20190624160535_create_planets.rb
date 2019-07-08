@@ -9,9 +9,9 @@ class CreatePlanets < ActiveRecord::Migration[5.2]
       t.string :day_length
       t.integer :sun_distance
       t.integer :temperature
-      t.integer :moons
       t.boolean :isAdopted
-      t.string :types
+      t.text :comment
+      t.text :desc
       
       t.timestamps
     end

@@ -15,10 +15,18 @@ class PlanetsController < ApplicationController
   end
 
   def update
-    # byebug
     planet = Planet.find(params[:id])
     planet.update(likes: params[:likes].to_i)
       render json: planet
+  end
+
+  def create
+    planet = Planet.new(comment: params[:comment])
+    if planet.save
+      render json: planet
+    else
+      render json: { error: "comment can not generate from CREATE" }, status: 400
+    end
   end
 
 end
