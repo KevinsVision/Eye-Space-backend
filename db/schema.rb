@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_06_25_095210) do
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
+    t.string "first"
     t.integer "likes"
     t.string "diameter"
     t.float "mass"
